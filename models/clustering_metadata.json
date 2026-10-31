@@ -1,0 +1,94 @@
+{
+  "task": "Property Market Segmentation (Clustering)",
+  "algorithm": "K-Means",
+  "selected_k": 3,
+  "random_seed": 42,
+  "k_evaluations": {
+    "2": {
+      "k": 2,
+      "inertia": 86580.43,
+      "silhouette_score": 0.3229
+    },
+    "3": {
+      "k": 3,
+      "inertia": 71068.91,
+      "silhouette_score": 0.2402
+    },
+    "4": {
+      "k": 4,
+      "inertia": 60345.93,
+      "silhouette_score": 0.2478
+    },
+    "5": {
+      "k": 5,
+      "inertia": 53176.23,
+      "silhouette_score": 0.2363
+    },
+    "6": {
+      "k": 6,
+      "inertia": 48336.39,
+      "silhouette_score": 0.2365
+    }
+  },
+  "silhouette_score": 0.2402,
+  "inertia": 71068.91,
+  "clustering_features": [
+    "sqft_living",
+    "bedrooms",
+    "bathrooms",
+    "grade",
+    "condition",
+    "price"
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "name": "Mid-Market Suburban Residences",
+      "count": 10162,
+      "percentage": 47.02,
+      "mean_price": 523559.06,
+      "median_price": 499950.0,
+      "mean_sqft_living": 2270.4,
+      "median_sqft_living": 2230.0,
+      "mean_bedrooms": 3.7,
+      "mean_bathrooms": 2.41,
+      "mean_grade": 7.86,
+      "mean_condition": 3.33
+    },
+    {
+      "cluster_id": 1,
+      "name": "Budget & Starter Homes",
+      "count": 8865,
+      "percentage": 41.02,
+      "mean_price": 367291.8,
+      "median_price": 340000.0,
+      "mean_sqft_living": 1369.0,
+      "median_sqft_living": 1350.0,
+      "mean_bedrooms": 2.75,
+      "mean_bathrooms": 1.46,
+      "mean_grade": 6.82,
+      "mean_condition": 3.53
+    },
+    {
+      "cluster_id": 2,
+      "name": "Executive & Luxury Estates",
+      "count": 2586,
+      "percentage": 11.97,
+      "mean_price": 1197399.88,
+      "median_price": 1000000.0,
+      "mean_sqft_living": 3768.3,
+      "median_sqft_living": 3580.0,
+      "mean_bedrooms": 4.21,
+      "mean_bathrooms": 3.2,
+      "mean_grade": 9.73,
+      "mean_condition": 3.3
+    }
+  ],
+  "persona_map": {
+    "1": "Budget & Starter Homes",
+    "0": "Mid-Market Suburban Residences",
+    "2": "Executive & Luxury Estates"
+  },
+  "total_properties": 21613,
+  "notes": "Statistical segmentation based on unlabelled physical & financial features. Not official municipal zoning."
+}

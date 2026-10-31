@@ -1,0 +1,148 @@
+{
+  "task": "Price Prediction (Regression)",
+  "selected_model": "Random Forest Regressor",
+  "random_seed": 42,
+  "training_samples": 17290,
+  "test_samples": 4323,
+  "input_features": [
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "grade",
+    "sqft_above",
+    "sqft_basement",
+    "yr_built",
+    "yr_renovated",
+    "lat",
+    "long",
+    "sqft_living15",
+    "sqft_lot15",
+    "zipcode"
+  ],
+  "numerical_features": [
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "grade",
+    "sqft_above",
+    "sqft_basement",
+    "yr_built",
+    "yr_renovated",
+    "lat",
+    "long",
+    "sqft_living15",
+    "sqft_lot15"
+  ],
+  "categorical_features": [
+    "zipcode"
+  ],
+  "model_comparison": {
+    "Linear Regression": {
+      "cv_r2": 0.8033,
+      "cv_mae": 96086.51,
+      "cv_rmse": 160247.21,
+      "cv_time_sec": 0.51,
+      "test_mae": 98581.32,
+      "test_rmse": 170645.62,
+      "test_r2": 0.8074
+    },
+    "Ridge Regression": {
+      "cv_r2": 0.8011,
+      "cv_mae": 96371.46,
+      "cv_rmse": 161148.03,
+      "cv_time_sec": 0.32,
+      "test_mae": 98911.99,
+      "test_rmse": 171801.83,
+      "test_r2": 0.8048
+    },
+    "Random Forest Regressor": {
+      "cv_r2": 0.8706,
+      "cv_mae": 70812.63,
+      "cv_rmse": 130013.02,
+      "cv_time_sec": 28.77,
+      "test_mae": 74243.39,
+      "test_rmse": 149108.29,
+      "test_r2": 0.8529
+    }
+  },
+  "champion_metrics": {
+    "r2": 0.8529,
+    "mae": 74243.39,
+    "rmse": 149108.29,
+    "cv_r2": 0.8706
+  },
+  "top_feature_importances": [
+    {
+      "feature": "grade",
+      "importance": 0.3175
+    },
+    {
+      "feature": "sqft_living",
+      "importance": 0.2876
+    },
+    {
+      "feature": "lat",
+      "importance": 0.1526
+    },
+    {
+      "feature": "long",
+      "importance": 0.0623
+    },
+    {
+      "feature": "waterfront",
+      "importance": 0.0316
+    },
+    {
+      "feature": "yr_built",
+      "importance": 0.0315
+    },
+    {
+      "feature": "sqft_living15",
+      "importance": 0.0283
+    },
+    {
+      "feature": "sqft_above",
+      "importance": 0.017
+    },
+    {
+      "feature": "sqft_lot",
+      "importance": 0.011
+    },
+    {
+      "feature": "view",
+      "importance": 0.0101
+    },
+    {
+      "feature": "bathrooms",
+      "importance": 0.01
+    },
+    {
+      "feature": "sqft_lot15",
+      "importance": 0.0099
+    },
+    {
+      "feature": "zipcode_98004",
+      "importance": 0.0063
+    },
+    {
+      "feature": "sqft_basement",
+      "importance": 0.0047
+    },
+    {
+      "feature": "condition",
+      "importance": 0.0023
+    }
+  ],
+  "market": "King County (Seattle, Washington, USA)",
+  "notes": "Estimates reflect historical Seattle market conditions. Not guaranteed appraisals."
+}
